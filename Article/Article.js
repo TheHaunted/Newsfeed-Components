@@ -27,3 +27,12 @@ class Article {
 */
 
 let articles;
+
+
+function expandArticle(event){
+  event.target.parentNode.classList.toggle('article-open');
+}
+
+let expandButton = document.querySelector('.expandButton');
+expandButton.textContent = 'Expand';
+expandButton.addEventListener('click', event => expandArticle(event));
