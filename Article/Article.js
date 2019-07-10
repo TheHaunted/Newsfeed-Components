@@ -26,13 +26,24 @@ class Article {
 
 */
 
-let articles;
+// let articles;
 
+// const articlePanels = document.createElement('div');
+// const panel = document.createElement('div');
+// const panelTitle = document.createElement('h2');
+// const panelDate = document.createElement('p');
+// const panelContent = document.createElement('p');
+
+// articlePanels.forEach(panel => panel.appendChild())
+
+
+let articlesContainer = document.querySelector('.articles');
+articlesContainer.addEventListener('click', event => expandArticle(event));
 
 function expandArticle(event){
+  console.log(event.target);
   event.target.parentNode.classList.toggle('article-open');
 }
 
-let expandButton = document.querySelector('.expandButton');
-expandButton.textContent = 'Expand';
-expandButton.addEventListener('click', event => expandArticle(event));
+let expandButtons = document.querySelectorAll('.expandButton');
+expandButtons.forEach(button => button.textContent = 'Expand');
