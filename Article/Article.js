@@ -36,6 +36,10 @@ class Article {
 
 // articlePanels.forEach(panel => panel.appendChild())
 
+let closeButton = document.createElement('button');
+closeButton.classList.add('expandButton');
+
+
 
 let articlesContainer = document.querySelector('.articles');
 articlesContainer.addEventListener('click', event => expandArticle(event));
